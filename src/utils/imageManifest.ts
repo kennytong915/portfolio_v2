@@ -4,6 +4,7 @@
 export const imageManifest: string[] = [
   // Hero banner background and mask (from index.css .banner::before)
   '/bg.jpg',
+  '/bg2.jpg',
   '/ink_lv2.gif',
 
   // BeyondCode tiles

@@ -102,7 +102,7 @@ export default function Projects() {
   }, [selected])
 
   return (
-    <section role="region" aria-label="Projects" id="projects" className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center px-6 md:px-12 bg-umber/20">
+    <section role="region" aria-label="Projects" id="projects" className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center px-6 md:px-12 bg-\[\#0f0f0f\]">
       <div className="max-w-6xl mx-auto w-full">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
@@ -140,60 +140,17 @@ export default function Projects() {
                   onClick={() => setSelected(p)}
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-ink via-umber to-ink shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]">
-                    <div className="h-full w-full grid grid-cols-3 gap-1 p-1">
-                      {(() => {
-                        const imgs = p.images && p.images.length > 0 ? p.images : []
-                        const slotSrc = (i: number) => (imgs.length ? imgs[i % imgs.length] : null)
-                        return (
-                          <>
-                            <div className="col-span-2 rounded-xl overflow-hidden bg-black/30">
-                              {slotSrc(0) && (
-                                <img
-                                  src={slotSrc(0) as string}
-                                  alt=""
-                                  className="h-full w-full object-cover brightness-90 contrast-105 group-hover:brightness-100 transition-[filter] duration-500 ease-out"
-                                  loading="lazy"
-                                  decoding="async"
-                                />
-                              )}
-                            </div>
-                            <div className="rounded-xl overflow-hidden bg-black/20">
-                              {slotSrc(1) && (
-                                <img
-                                  src={slotSrc(1) as string}
-                                  alt=""
-                                  className="h-full w-full object-cover brightness-90 contrast-105 group-hover:brightness-100 transition-[filter] duration-500 ease-out"
-                                  loading="lazy"
-                                  decoding="async"
-                                />
-                              )}
-                            </div>
-                            <div className="rounded-xl overflow-hidden bg-black/20">
-                              {slotSrc(2) && (
-                                <img
-                                  src={slotSrc(2) as string}
-                                  alt=""
-                                  className="h-full w-full object-cover brightness-90 contrast-105 group-hover:brightness-100 transition-[filter] duration-500 ease-out"
-                                  loading="lazy"
-                                  decoding="async"
-                                />
-                              )}
-                            </div>
-                            <div className="col-span-2 rounded-xl overflow-hidden bg-black/30">
-                              {slotSrc(3) && (
-                                <img
-                                  src={slotSrc(3) as string}
-                                  alt=""
-                                  className="h-full w-full object-cover brightness-90 contrast-105 group-hover:brightness-100 transition-[filter] duration-500 ease-out"
-                                  loading="lazy"
-                                  decoding="async"
-                                />
-                              )}
-                            </div>
-                          </>
-                        )
-                      })()}
-                    </div>
+                    {p.images && p.images.length > 0 ? (
+                      <img
+                        src={p.images[0]}
+                        alt=""
+                        className="h-full w-full object-cover brightness-90 contrast-105 group-hover:brightness-100 transition-[filter] duration-500 ease-out"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : (
+                      <div className="h-full w-full bg-black/30" />
+                    )}
                     {/* Themed coral/rust tint overlay (subtle on hover) */}
                     <div
                       className="pointer-events-none absolute inset-0 mix-blend-multiply bg-gradient-to-tr from-coral/60 via-rust/50 to-umber/40 opacity-60 group-hover:opacity-25 transition-opacity duration-500 ease-out"

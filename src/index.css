@@ -36,6 +36,25 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
+/* Small device landscape handling: hide app, show rotate prompt */
+@media (orientation: landscape) and (max-width: 820px) {
+  .landscape-hide { display: none !important; }
+  .landscape-lock {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #0c0c0c;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+/* Default: hide the overlay */
+.landscape-lock { display: none; }
+
 /* Component styles */
 .btn-primary {
   @apply inline-flex items-center justify-center px-5 py-3 rounded-full bg-coral text-ink border border-coral shadow-sm transition-all duration-300 ease-out;
@@ -113,7 +132,94 @@ body {
   -webkit-mask-repeat: no-repeat;
 }
 
+/* Contact section background */
+.contact-banner {
+  position: relative;
+}
+.contact-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url('/bg2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Slight darkening for legibility */
+  filter: brightness(0.6) saturate(0.95);
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+}
+
+/* Loader shimmer keyframes */
+@keyframes loader-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Subtle animated fireflies for About section */
+.about-fireflies {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.about-firefly {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: var(--color-coral);
+  opacity: 0.25;
+  filter: drop-shadow(0 0 4px rgba(242, 97, 63, 0.6));
+  will-change: transform, opacity, filter;
+  animation-name: about-fly, about-pulse;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-direction: alternate, alternate;
+  animation-duration: 24s, 3s;
+}
+
+@keyframes about-fly {
+  0% { transform: translate(0, 0) scale(0.85); }
+  100% { transform: translate(var(--tx, 0), var(--ty, 0)) scale(1.15); }
+}
+
+@keyframes about-pulse {
+  0%, 100% {
+    opacity: 0.18;
+    filter: drop-shadow(0 0 2px rgba(242, 97, 63, 0.35));
+  }
+  50% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 8px rgba(242, 97, 63, 0.9));
+  }
+}
+
+/* 15 varied instances (positions, vectors, timing) */
+.about-firefly:nth-child(1)  { top: 12%; left: 14%; --tx: 22vw;  --ty: -8vh;  animation-duration: 28s, 3.2s; animation-delay: 0s, .2s; }
+.about-firefly:nth-child(2)  { top: 22%; left: 68%; --tx: -26vw; --ty: 12vh;  animation-duration: 26s, 2.4s; animation-delay: .6s, .1s; }
+.about-firefly:nth-child(3)  { top: 38%; left: 32%; --tx: 18vw;  --ty: 16vh;  animation-duration: 30s, 2.8s; animation-delay: .2s, .5s; }
+.about-firefly:nth-child(4)  { top: 64%; left: 18%; --tx: 20vw;  --ty: -14vh; animation-duration: 25s, 2.6s; animation-delay: .9s, .3s; }
+.about-firefly:nth-child(5)  { top: 72%; left: 76%; --tx: -18vw; --ty: -10vh; animation-duration: 27s, 3.0s; animation-delay: .4s, .6s; }
+.about-firefly:nth-child(6)  { top: 48%; left: 84%; --tx: -24vw; --ty: 10vh;  animation-duration: 32s, 2.2s; animation-delay: .1s, .0s; }
+.about-firefly:nth-child(7)  { top: 18%; left: 82%; --tx: -20vw; --ty: 14vh;  animation-duration: 29s, 2.7s; animation-delay: .7s, .2s; }
+.about-firefly:nth-child(8)  { top: 26%; left: 44%; --tx: 14vw;  --ty: -12vh; animation-duration: 26s, 2.9s; animation-delay: .3s, .4s; }
+.about-firefly:nth-child(9)  { top: 58%; left: 40%; --tx: 18vw;  --ty: 10vh;  animation-duration: 31s, 2.1s; animation-delay: .5s, .2s; }
+.about-firefly:nth-child(10) { top: 82%; left: 30%; --tx: 24vw;  --ty: -16vh; animation-duration: 33s, 2.5s; animation-delay: .2s, .7s; }
+.about-firefly:nth-child(11) { top: 10%; left: 52%; --tx: -12vw; --ty: 14vh;  animation-duration: 24s, 2.3s; animation-delay: .8s, .1s; }
+.about-firefly:nth-child(12) { top: 66%; left: 60%; --tx: -16vw; --ty: -14vh; animation-duration: 28s, 2.4s; animation-delay: .0s, .6s; }
+.about-firefly:nth-child(13) { top: 30%; left: 10%; --tx: 26vw;  --ty: 12vh;  animation-duration: 27s, 2.7s; animation-delay: .6s, .3s; }
+.about-firefly:nth-child(14) { top: 80%; left: 84%; --tx: -22vw; --ty: -8vh;  animation-duration: 29s, 2.8s; animation-delay: .4s, .4s; }
+.about-firefly:nth-child(15) { top: 44%; left: 72%; --tx: -14vw; --ty: -12vh; animation-duration: 26s, 2.6s; animation-delay: .9s, .5s; }
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .about-firefly { animation: none; opacity: 0.15; filter: none; }
 }

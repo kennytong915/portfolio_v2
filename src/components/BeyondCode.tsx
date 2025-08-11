@@ -61,7 +61,14 @@ export default function BeyondCode() {
       id="beyond"
       className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center px-6 md:px-12"
     >
-      <div className="max-w-6xl mx-auto w-full">
+      {/* Decorative animated background */}
+      <div aria-hidden className="about-fireflies">
+        {Array.from({ length: 15 }).map((_, idx) => (
+          <span key={idx} className="about-firefly" />
+        ))}
+      </div>
+
+      <div className="relative z-[1] max-w-6xl mx-auto w-full">
         <h2 className="text-2xl md:text-3xl font-medium text-white">Beyond Coding</h2>
         <p className="mt-3 md:mt-4 text-white/70 md:text-lg max-w-3xl">
           Some of my hobbies and interests outside of coding.
