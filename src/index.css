@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* Tailwind v4 theme tokens for custom palette (dark theme) */
+@theme {
+  /* White for text/utilities */
+  --color-white: #ffffff;
+  --color-white-100: #f5f5f5;
+  --color-white-200: #e5e5e5;
+  --color-white-300: #d4d4d4;
+  --color-white-400: #a3a3a3;
+  --color-white-500: #ffffff;
+
+  /* Ink / Base */
+  --color-ink: #0c0c0c;
+  /* Umber / Deep surface */
+  --color-umber: #481e14;
+  /* Rust / Secondary accent */
+  --color-rust: #9b3922;
+  /* Coral / Primary accent */
+  --color-coral: #f2613f;
+}
+
+/* Base styles */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-white-100;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Component styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-full bg-coral text-ink border border-coral shadow-sm transition-all duration-300 ease-out;
+}
+.btn-primary:hover { @apply shadow-md -translate-y-0.5 brightness-110; }
+.btn-primary:active { @apply translate-y-0; }
+.btn-primary:focus-visible { @apply outline-none ring-4 ring-rust/40; }
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-full text-coral border border-coral/40 bg-ink transition-all duration-300 ease-out;
+}
+.btn-outline:hover { @apply text-ink bg-coral border-coral -translate-y-0.5; }
+.btn-outline:active { @apply translate-y-0; }
+.btn-outline:focus-visible { @apply outline-none ring-4 ring-rust/40; }
+
+/* Glassy buttons for hero */
+.btn-glass-primary {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-full transition-all duration-300 ease-out backdrop-blur text-white border border-coral/50 bg-coral/30;
+}
+.btn-glass-primary:hover { @apply bg-coral/50 border-coral -translate-y-0.5; }
+.btn-glass-primary:active { @apply translate-y-0; }
+.btn-glass-primary:focus-visible { @apply outline-none ring-4 ring-rust/40; }
+
+.btn-glass-neutral {
+  @apply inline-flex items-center justify-center px-5 py-3 rounded-full transition-all duration-300 ease-out backdrop-blur text-white border border-white/15 bg-white/5;
+}
+.btn-glass-neutral:hover { @apply bg-white/10 border-white/30 -translate-y-0.5; }
+.btn-glass-neutral:active { @apply translate-y-0; }
+.btn-glass-neutral:focus-visible { @apply outline-none ring-4 ring-white/10; }
+
+.tag {
+  @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs border border-rust/30 bg-umber text-white-200 transition-colors duration-300;
+}
+.tag:hover { @apply border-rust/60 bg-rust/40 text-white; }
+
+/* Scroll snapping - gentle */
+/* Snap behavior is defined on <main> in App.tsx for clarity */
+
+/* Subtle background texture */
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Swiper theming */
+:root {
+  --swiper-navigation-color: var(--color-coral);
+}
+
+/* Hero masked background banner */
+.banner {
+  position: relative;
+}
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url('/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Animated ink mask */
+  mask-image: url('/ink_lv2.gif');
+  -webkit-mask-image: url('/ink_lv2.gif');
+  mask-size: cover;
+  -webkit-mask-size: cover;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
