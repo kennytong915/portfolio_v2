@@ -94,7 +94,7 @@ export default function ImageTrack() {
       role="region"
       aria-label="Image Track"
       id="gallery"
-      className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center justify-center px-6 md:px-12"
+      className="relative h-[calc(100vh-4rem)] flex items-center justify-center px-6 md:px-12"
     >
       {/* Overlay content aligned to section container (matches Contact/About) */}
       <div className="pointer-events-none absolute inset-0 z-10">

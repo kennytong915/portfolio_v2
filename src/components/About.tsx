@@ -12,7 +12,7 @@ const skills = [
 
 export default function About() {
   return (
-    <section role="region" aria-label="About" id="about" className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center px-6 md:px-12">
+    <section role="region" aria-label="About" id="about" className="relative h-[calc(100vh-4rem)] flex items-center py-80 px-6 md:px-12">
       {/* Decorative animated background */}
       <div aria-hidden className="about-fireflies">
         {Array.from({ length: 15 }).map((_, idx) => (

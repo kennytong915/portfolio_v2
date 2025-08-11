@@ -40,7 +40,7 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section role="region" aria-label="Contact" id="contact" className="contact-banner relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center px-6 md:px-12">
+    <section role="region" aria-label="Contact" id="contact" className="contact-banner relative h-[calc(100vh-4rem)] flex items-center px-6 md:px-12">
       <div className="max-w-5xl mx-auto w-full">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}

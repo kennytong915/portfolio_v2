@@ -59,7 +59,7 @@ export default function BeyondCode() {
       role="region"
       aria-label="Beyond Code"
       id="beyond"
-      className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center px-6 md:px-12"
+      className="relative h-[calc(100vh-4rem)] flex items-center px-6 md:px-12"
     >
       {/* Decorative animated background */}
       <div aria-hidden className="about-fireflies">

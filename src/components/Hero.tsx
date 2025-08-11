@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <section role="region" aria-label="Hero" id="hero" className="relative h-[calc(100vh-4rem)] snap-start snap-always flex items-center justify-center px-6 md:px-12 overflow-hidden banner">
+    <section role="region" aria-label="Hero" id="hero" className="relative h-[calc(100vh-4rem)] flex items-center justify-center px-6 md:px-12 overflow-hidden banner">
       <div className="absolute top-10 left-1/2 -translate-x-1/2 bg-picton_blue-300/20 blur-3xl h-64 w-64 rounded-full" />
 
       <div className="max-w-5xl mx-auto text-center">

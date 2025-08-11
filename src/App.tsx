@@ -18,7 +18,7 @@ function App() {
         </div>
       </div>
       {/* Optional: keep Nav import but omit render; using SectionRail instead */}
-      <main className="landscape-hide noise-overlay h-screen overflow-y-auto snap-y snap-proximity scroll-pt-16 scroll-smooth overscroll-y-contain">
+      <main className="landscape-hide noise-overlay h-screen overflow-y-auto scroll-pt-16 scroll-smooth overscroll-y-contain">
         <SectionRail ids={["hero", "about", "projects", "beyond", "contact"]} />
         <Hero />
         <About />
