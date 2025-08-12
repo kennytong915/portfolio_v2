@@ -31,6 +31,14 @@ const placeholderProjects: Project[] = [
     github: 'https://github.com/kennytong915/kana-guesser'
   },
   {
+    title: 'Portfolio',
+    description: 'This portfolio that you are currently viewing. Focuses on showcasing my projects and skills, with emphasis on user experience and design.',
+    tech: ['React', 'Framer Motion'],
+    images: ['/portfolio.png'],
+    live: 'https://www.kennytong.dev/',
+    github: 'https://github.com/kennytong915/portfolio_v2'
+  },
+  {
     title: 'Gulugulu',
     description: 'A web crawling and search system that allows users to fetch webpages into their local system and perform efficient searches across stored content. Built as a course project exploring information retrieval concepts.',
     tech: ['Java', 'JSP', 'JDBM'],

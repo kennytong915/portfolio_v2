@@ -23,7 +23,7 @@ export default function Hero() {
           viewport={{ once: true }}
           className="mt-6 text-white/70 md:text-lg max-w-2xl mx-auto"
         >
-          As a recent Computer Engineering graduate of HKUST, I am a dedicated software engineer with a strong foundation in computer science and a passion for technology.
+          As a recent Computer Engineering graduate of HKUST, I am a dedicated software developer with a passion for technology.
         </motion.p>
 
         <motion.div

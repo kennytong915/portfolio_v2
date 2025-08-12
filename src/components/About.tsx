@@ -12,7 +12,7 @@ const skills = [
 
 export default function About() {
   return (
-    <section role="region" aria-label="About" id="about" className="relative h-[calc(100vh-4rem)] flex items-center py-80 px-6 md:px-12">
+    <section role="region" aria-label="About" id="about" className="relative h-[calc(100vh-4rem)] flex items-center pt-60 pb-30 px-6 md:px-12">
       {/* Decorative animated background */}
       <div aria-hidden className="about-fireflies">
         {Array.from({ length: 15 }).map((_, idx) => (
@@ -24,7 +24,7 @@ export default function About() {
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 1, ease: 'easeOut' }}
           viewport={{ once: true }}
           className="text-2xl md:text-3xl font-medium text-white"
         >
@@ -34,17 +34,25 @@ export default function About() {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.05, ease: 'easeOut' }}
+          transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
           viewport={{ once: true }}
           className="mt-6 text-white/70 md:text-lg max-w-3xl"
         >
-          As a software developer, I focus on building thoughtful, practical software with a strong attention to detail and user experience. I possess a "can-do" attitude and a strong desire to learn and grow, and I am always looking for new challenges and opportunities to expand my knowledge and skills.
-        </motion.p>
+          Hi, I'm Kenny, a Computer Engineering graduate with a deep passion for software development.        </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.05, ease: 'easeOut' }}
+          transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="mt-6 text-white/70 md:text-lg max-w-3xl"
+        >
+          As a software developer, I focus on building thoughtful, practical solutions that prioritize attention to detail and user experience. I thrive on new challenges and am always eager to learn and grow by continually expanding my skills through building new projects. </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
           viewport={{ once: true }}
           className="mt-6 text-white/70 md:text-lg max-w-3xl"
         >
@@ -54,7 +62,7 @@ export default function About() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
+          transition={{ duration: 1, delay: 0.1, ease: 'easeOut' }}
           viewport={{ once: true }}
           className="mt-8 flex flex-wrap gap-2"
         >

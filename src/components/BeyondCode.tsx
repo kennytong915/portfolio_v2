@@ -11,7 +11,7 @@ const tiles: Tile[] = [
       title: 'Travel',
       image: '/travel.jpg',
       description:
-        'Ever since my exchange in Japan, I have fallen in love with the country and its culture. You may often find me taking weekend trips to Tokyo.',
+        'Ever since my exchange in Japan in 2023, I have fallen in love with the country and what it has to offer. You may often find me taking weekend trips to Tokyo.',
     },
     {
       title: 'Gaming',
@@ -23,13 +23,13 @@ const tiles: Tile[] = [
       title: 'Ramen',
       image: '/ramen.jpg',
       description:
-        'I am a ramen enthusiast who wants to try all the top 100 ramen shops in Japan. My favorite styles are shio and shoyu.',
+        'I am a ramen enthusiast who aims to try all the top 100 ramen shops in Japan. My favorite styles are shio and shoyu. \n Current progress: 30/100.',
     },
     {
       title: 'Music',
       image: '/electric_guitar.jpg',
       description:
-        'I play the piano and violin. indigo la End is my favorite band, and they inspired me to pick up the electric guitar last year.'
+        'I love playing musical instruments, including piano and violin, and recently started learning electric guitar inspired by my favorite Japanese band, indigo la End.'    
     },
   ]
 
@@ -69,7 +69,7 @@ export default function BeyondCode() {
       </div>
 
       <div className="relative z-[1] max-w-6xl mx-auto w-full">
-        <h2 className="text-2xl md:text-3xl font-medium text-white">Beyond Coding</h2>
+        <h2 className="text-2xl md:text-3xl font-medium text-white">Besides Coding</h2>
         <p className="mt-3 md:mt-4 text-white/70 md:text-lg max-w-3xl">
           Some of my hobbies and interests outside of coding.
         </p>
