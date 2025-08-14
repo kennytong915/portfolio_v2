@@ -120,13 +120,13 @@ export default function ImageTrack() {
       {/* Full-bleed track behind */}
       <div className="relative w-full h-full overflow-hidden -mx-6 md:-mx-12">
         <div id="image-track" ref={trackRef}>
-          <img className="image" src="/img1.jpeg" draggable={false} alt="" />
-          <img className="image" src="/img2.jpeg" draggable={false} alt="" />
-          <img className="image" src="/img3.jpeg" draggable={false} alt="" />
-          <img className="image" src="/img4.jpeg" draggable={false} alt="" />
-          <img className="image" src="/img5.jpeg" draggable={false} alt="" />
-          <img className="image" src="/img6.jpeg" draggable={false} alt="" />
-          <img className="image" src="/img7.jpeg" draggable={false} alt="" />
+          <img className="image" src="/img1.webp" draggable={false} alt="" />
+          <img className="image" src="/img2.webp" draggable={false} alt="" />
+          <img className="image" src="/img3.webp" draggable={false} alt="" />
+          <img className="image" src="/img4.webp" draggable={false} alt="" />
+          <img className="image" src="/img5.webp" draggable={false} alt="" />
+          <img className="image" src="/img6.webp" draggable={false} alt="" />
+          <img className="image" src="/img7.webp" draggable={false} alt="" />
         </div>
 
       </div>

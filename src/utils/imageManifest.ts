@@ -3,28 +3,28 @@
 
 export const imageManifest: string[] = [
   // Hero banner background and mask (from index.css .banner::before)
-  '/bg.jpg',
-  '/bg2.jpg',
+  '/bg.webp',
+  '/bg2.webp',
   '/ink_lv2.gif',
 
   // BeyondCode tiles
-  '/travel.jpg',
-  '/gaming3.jpg',
-  '/ramen.jpg',
-  '/electric_guitar.jpg',
+  '/travel.webp',
+  '/gaming3.webp',
+  '/ramen.webp',
+  '/electric_guitar.webp',
 
   // Projects thumbnails and gallery images
-  '/ramen1.png',
-  '/ramen2.png',
-  '/ramen3.png',
-  '/ramen4.png',
-  '/kana.png',
-  '/kana1.png',
-  '/kana2.png',
-  '/kana3.png',
-  '/gulugulu1.png',
-  '/gulugulu2.png',
-  '/gulugulu3.png',
-  '/gulugulu4.png',
+  '/ramen1.webp',
+  '/ramen2.webp',
+  '/ramen3.webp',
+  '/ramen4.webp',
+  '/kana.webp',
+  '/kana1.webp',
+  '/kana2.webp',
+  '/kana3.webp',
+  '/gulugulu1.webp',
+  '/gulugulu2.webp',
+  '/gulugulu3.webp',
+  '/gulugulu4.webp',
 ]
 

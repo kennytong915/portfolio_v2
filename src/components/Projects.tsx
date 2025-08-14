@@ -19,14 +19,14 @@ const placeholderProjects: Project[] = [
     title: 'Japan Ramen Database',
     description: 'Born from a love for ramen and a desire to sharpen my full-stack skills, I created a database to rank and explore Japanese ramen shops.',
     tech: ['React', 'Spring Boot', 'MySQL', 'AWS S3', 'Bucket4j', 'Google reCAPTCHA', 'JWT', 'Docker'],
-    images: ['/ramen1.png', '/ramen2.png', '/ramen3.png', '/ramen4.png'],
+    images: ['/ramen1.webp', '/ramen2.webp', '/ramen3.webp', '/ramen4.webp'],
     github: 'https://github.com/kennytong915/Japan-Ramen-Database'
   },
   {
     title: 'KanaGuesser',
     description: 'A Japanese word‑guessing game I built to learn vocabulary and explore AWS services.',
     tech: ['React', 'AWS Lambda', 'AWS API Gateway', 'AWS DynamoDB'],
-    images: ['/kana.png', 'kana1.png', 'kana3.png', 'kana2.png'],
+    images: ['/kana.webp', 'kana1.webp', 'kana3.webp', 'kana2.webp'],
     live: 'https://kanaguesser.netlify.app/',
     github: 'https://github.com/kennytong915/kana-guesser'
   },
@@ -34,7 +34,7 @@ const placeholderProjects: Project[] = [
     title: 'Portfolio',
     description: 'This portfolio that you are currently viewing. Focuses on showcasing my projects and skills, with emphasis on user experience and design.',
     tech: ['React', 'Framer Motion'],
-    images: ['/portfolio.png'],
+    images: ['/portfolio.webp'],
     live: 'https://www.kennytong.dev/',
     github: 'https://github.com/kennytong915/portfolio_v2'
   },
@@ -42,7 +42,7 @@ const placeholderProjects: Project[] = [
     title: 'Gulugulu',
     description: 'A web crawling and search system that allows users to fetch webpages into their local system and perform efficient searches across stored content. Built as a course project exploring information retrieval concepts.',
     tech: ['Java', 'JSP', 'JDBM'],
-    images: ['/gulugulu1.png', '/gulugulu2.png', '/gulugulu4.png', '/gulugulu3.png'],
+    images: ['/gulugulu1.webp', '/gulugulu2.webp', '/gulugulu4.webp', '/gulugulu3.webp'],
     github: 'https://github.com/kennytong915/web-based-search-engine',
   },
 ]

@@ -9,25 +9,25 @@ type Tile = {
 const tiles: Tile[] = [
     {
       title: 'Travel',
-      image: '/travel.jpg',
+      image: '/travel.webp',
       description:
         'Ever since my exchange in Japan in 2023, I have fallen in love with the country and what it has to offer. You may often find me taking weekend trips to Tokyo.',
     },
     {
       title: 'Gaming',
-      image: '/gaming3.jpg',
+      image: '/gaming3.webp',
       description:
         'Video games are my favorite way to bond with friends. I enjoy co-op games and strategy games like auto chess and card games.'
     },
     {
       title: 'Ramen',
-      image: '/ramen.jpg',
+      image: '/ramen.webp',
       description:
         'I am a ramen enthusiast who aims to try all the top 100 ramen shops in Japan. My favorite styles are shio and shoyu. \n Current progress: 30/100.',
     },
     {
       title: 'Music',
-      image: '/electric_guitar.jpg',
+      image: '/electric_guitar.webp',
       description:
         'I love playing musical instruments, including piano and violin, and recently started learning electric guitar inspired by my favorite Japanese band, indigo la End.'    
     },
